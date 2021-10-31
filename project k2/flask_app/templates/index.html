@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Liver patient analysis</title>
+  <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Sriracha&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <div class="con">
+    <p>chintha pavan kumar</p>
+
+  </div>
+  <div class="head">
+    <h1>prediction of liver disease</h1><br><br>
+    <h3>Context:</h3>
+    <p>Patients with Liver disease have been continuously increasing because of excessive consumption of alcohol, inhale of harmful gases, intake of contaminated food, pickles and drugs. This dataset was used to evaluate prediction algorithms in an effort to reduce burden on doctors.</p>
+    <h3>Content:</h3>
+    <p>This data set contains 416 liver patient records and 167 non liver patient records collected from North East of Andhra Pradesh, India. The "Dataset" column is a class label used to divide groups into liver patient (liver disease) or not (no disease). This data set contains 441 male patient records and 142 female patient records.</p>
+    <div class="image">
+
+
+    <img src="{{url_for('static', filename='img/img1.png')}}" align="center" /><br>
+    <img src="{{url_for('static', filename='img/img2.png')}}" align="center" /><br>
+    <img src="{{url_for('static', filename='img/img3.png')}}" align="center" /><br>
+    <img src="{{url_for('static', filename='img/img4.png')}}" align="center" /><br>
+    <img src="{{url_for('static', filename='img/img5.png')}}" align="center" /><br>
+    <img src="{{url_for('static', filename='img/img6.png')}}" align="center" /><br>
+    <img src="{{url_for('static', filename='img/img7.png')}}" align="center" /><br>
+    <img src="{{url_for('static', filename='img/img8.png')}}" align="center" /></div>
+    <h3>Goal:</h3>
+    <p>Use these patient records to determine which patients have liver disease and which ones do not.</p>
+  </div>
+  <div class="main">
+
+<h1>Enter your report results</h1>
+  <form action="{{url_for('liver')}}" method="post">
+    <div class="row">
+
+      <div class="col-md-3 col-lg-6 col-sm-4 justify-content-center"><br>
+      <input type="text" name="Age" class="form-control" placeholder="Age" required="required"><br>
+        <select class="form-control" name="Gender" required="required">
+          <option value="">Gender</option>
+          <option value="0">female</option>
+          <option value="1">male</option>
+        </select><br>
+
+        <input type="text" name="Total_Bilirubin" class="form-control" placeholder="Total_Bilirubin" required="required">
+      <br>
+        <input type="text" name="Direct_Bilirubin" class="form-control" placeholder="Direct_Bilirubin" required="required">
+      <br>
+
+        <input type="text" name="Alkaline_Phosphotase" class="form-control" placeholder="Alkaline_Phosphotase" required="required">
+      <br></div>
+      <div class="col-md-3 col-lg-6 col-sm-4 justify-content-center"><br>
+        <input type="text" name="Alamine_Aminotransferase" class="form-control" placeholder="Alamine_Aminotransferase" required="required">
+      <br>
+        <input type="text" name="Aspartate_Aminotransferase" class="form-control" placeholder="Aspartate_Aminotransferase" required="required">
+      <br>
+        <input type="text" name="Total_Protiens" class="form-control" placeholder="Total_Protiens" required="required">
+      <br>
+        <input type="text" name="Albumin" class="form-control" placeholder="Albumin" required="required">
+      <br>
+        <input type="text" name="Albumin_and_Globulin_Ratio" class="form-control" placeholder="Albumin_and_Globulin_Ratio" required="required">
+
+      </div><br>
+      <br></div>
+<br><button type="submit" class="btn btn-primary">submit</button>
+
+  </form>
+  <br>
+  <br>
+  <h2>{{ prediction_text }}</h2>
+</div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+.con{
+  height: 25px;
+  display: inline-block;
+  position: fixed;
+  color: #32e0c4;
+  text-align: right;
+  right: 10px;
+}
+body{
+  text-align: center;
+  background-color:#393e46 ;
+  margin: 0;
+}
+.main{
+  background-color: #eeeeee;
+  padding-top: 10%;
+  padding-right: 20%;
+  padding-left: 20%;
+  padding-bottom: 10%;
+
+}
+form{
+
+  align-items: center;
+}
+h1{
+  font-family: 'Metal Mania', cursive;
+  font-size: 6em;
+  color:#222831 ;
+  margin-bottom: 0;
+}
+h3,p{
+  text-align: left;
+  font-family: 'Sriracha', cursive;
+  color: #3b6978;
+  margin-left: 5%;
+}
+.head{
+  height: 100%;
+  text-align: center;
+  margin: 0;
+  padding-top: 10%;
+  background-color: #32e0c4;
+  padding-right: 20%;
+  padding-left: 10%;
+  padding-bottom: 10%;
+
+
+}

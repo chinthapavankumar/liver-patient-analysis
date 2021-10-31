@@ -1,0 +1,26 @@
+body{
+  background-color: #6a197d;
+  margin: 0;
+}
+h1{
+
+  font-family: 'Indie Flower', cursive;
+  font-size: 10em;
+}
+h3{
+  font-size: 4em;
+  font-family: 'Comfortaa', cursive;
+}
+p{
+  font-size: 2em;
+  font-family: 'Lemonada', cursive;
+}
+.A{
+  padding-top: 150px;
+  background-color: #ffa5b0;
+  height: 500px;
+  text-align: center;
+}
+.B{padding-left: 20%;
+padding-right: 20%;
+padding-top: 20px;}
